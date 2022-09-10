@@ -1,6 +1,6 @@
 /**
  *
- *File: 0-positive_or_negative.c 
+ * File: 0-positive_or_negative.c
  *
  */
 
@@ -9,7 +9,7 @@
 #include <stdio.h>
 
 /**
- * main - prints a random number and states whether it is positive, negative,, or zero.
+ * main - prints a random number whether it is positive, negative,, or zero.
  *
  * Return: Always 0
  */
