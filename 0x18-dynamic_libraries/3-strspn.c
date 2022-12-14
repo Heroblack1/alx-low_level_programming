@@ -1,31 +1,28 @@
 #include "main.h"
-
 /**
-*_strspn - function that count ocurrences of first segmen with accept char
-*@s: string of input
-*@accept: characters that should compare with s
-*Return: length of the ocurrrences with the first segment
-*/
-
+ * _strspn - Entry point
+ * @s: input
+ * @accept: input
+ * Return: Always 0 (Success)
+ */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i;
-	int length = 0;
+	unsigned int n = 0;
+	int r;
 
-	while (*s != ' ')
+	while (*s)
 	{
-		for (i = 0; accept[i] != '\0'; i++)
+		for (r = 0; accept[r]; r++)
 		{
-			if (*s != ' ')
+			if (*s == accept[r])
 			{
-				if (accept[i] == *s)
-				{
-					length++;
-				}
+				n++;
+				break;
 			}
-
+			else if (accept[r + 1] == '\0')
+				return (n);
 		}
 		s++;
 	}
-	return (length);
+	return (n);
 }
